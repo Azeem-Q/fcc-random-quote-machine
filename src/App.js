@@ -1,5 +1,22 @@
 import React from 'react';
 
-const App = ({ title }) => <div>{title}</div>;
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {}
+
+    render() {
+        const quotes = [];
+        const authors = [];
+        return (
+            <div>
+                <h1></h1>
+            </div>
+        );
+    }
+}
 
 export default App;
