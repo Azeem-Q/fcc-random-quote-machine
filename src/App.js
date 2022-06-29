@@ -54,7 +54,6 @@ const authors = [
 ];
 
 const random = Math.floor(Math.random() * quotes.length);
-// console.log(random);
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -81,7 +80,7 @@ class App extends React.Component {
                 <button id="new-quote" onClick={this.handleClick}>
                     New Quote
                 </button>
-                <a id="tweet-quote" href="twitter.com/intent/tweet">
+                <a id="tweet-quote" href="https://twitter.com/intent/tweet">
                     Tweet Quote
                 </a>
             </div>

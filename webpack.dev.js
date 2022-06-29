@@ -29,7 +29,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            title: 'React Boilerplate',
+            title: 'FCC Random Quote Machine',
+            inject: false,
             template: path.resolve(__dirname, './src/index.html'),
         }),
     ],
