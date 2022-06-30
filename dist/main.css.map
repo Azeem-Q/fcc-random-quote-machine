@@ -1,1 +1,0 @@
-{"version":3,"file":"main.css","mappings":"AAAA,WACI,qBAAsB","sources":["webpack://fcc-random-quote-machine/./src/style.scss"],"sourcesContent":["#quote-box {\r\n    background-color: aqua;\r\n}"],"names":[],"sourceRoot":""}
