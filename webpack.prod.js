@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
@@ -15,6 +16,10 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader'],
             },
+            {
+                test: /\.(css)$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
         ],
     },
     resolve: {
@@ -25,6 +30,7 @@ module.exports = {
         filename: 'bundle.js',
     },
     plugins: [
+        new MiniCssExtractPlugin(),
         new ESLintPlugin(),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
