@@ -78,11 +78,7 @@ class App extends React.Component {
             <div id="quote-box">
                 <p id="text">{this.state.quote}</p>
                 <p id="author">{this.state.author}</p>
-                <button
-                    id="new-quote"
-                    className="btn btn-primary btn-block"
-                    onClick={this.handleClick}
-                >
+                <button id="new-quote" onClick={this.handleClick}>
                     New Quote
                 </button>
                 <a id="tweet-quote" href="https://twitter.com/intent/tweet">
