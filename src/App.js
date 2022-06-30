@@ -1,5 +1,5 @@
 import React from 'react';
-import './app.css';
+import './style.scss';
 
 const quotes = [
     'I do not fear computers. I fear lack of them.',

@@ -17,8 +17,8 @@ module.exports = {
                 use: ['babel-loader'],
             },
             {
-                test: /\.(css)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                test: /\.(scss|css)$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
         ],
     },
@@ -36,7 +36,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: 'FCC Random Quote Machine',
-            inject: false,
+            inject: true,
             template: path.resolve(__dirname, './src/index.html'),
         }),
     ],
