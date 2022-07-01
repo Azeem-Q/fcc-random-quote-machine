@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import randomColor from 'randomcolor';
 
 const quotes = [
     'I do not fear computers. I fear lack of them.',
@@ -61,6 +62,7 @@ class App extends React.Component {
         this.state = {
             quote: quotes[random],
             author: authors[random],
+            color: randomColor(),
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -70,20 +72,30 @@ class App extends React.Component {
         this.setState({
             quote: quotes[clickRandom],
             author: authors[clickRandom],
+            color: randomColor(),
         });
     }
 
     render() {
         return (
-            <div id="quote-box">
-                <p id="text">{this.state.quote}</p>
-                <p id="author">{this.state.author}</p>
-                <button id="new-quote" onClick={this.handleClick}>
-                    New Quote
-                </button>
-                <a id="tweet-quote" href="https://twitter.com/intent/tweet">
-                    Tweet Quote
-                </a>
+            <div id='bg'
+                style={{
+                    backgroundColor: this.state.color,
+                }}
+            >
+                <div id="quote-box">
+                    <p id="text">{this.state.quote}</p>
+                    <p id="author">{this.state.author}</p>
+                    <button id="new-quote" onClick={this.handleClick} style={{
+                        backgroundColor: this.state.color,
+                        border: 'solid 1px ' + this.state.color
+                    }}>
+                        New Quote
+                    </button>
+                    <a id="tweet-quote" href="https://twitter.com/intent/tweet">
+                        Tweet Quote
+                    </a>
+                </div>
             </div>
         );
     }
