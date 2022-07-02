@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.scss';
 import randomColor from 'randomcolor';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const quotes = [
     'I do not fear computers. I fear lack of them.',
@@ -78,7 +80,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div id='bg'
+            <div
+                id="bg"
                 style={{
                     backgroundColor: this.state.color,
                 }}
@@ -86,14 +89,23 @@ class App extends React.Component {
                 <div id="quote-box">
                     <p id="text">{this.state.quote}</p>
                     <p id="author">{this.state.author}</p>
-                    <button id="new-quote" onClick={this.handleClick} style={{
-                        backgroundColor: this.state.color,
-                        border: 'solid 1px ' + this.state.color
-                    }}>
+                    <button
+                        id="new-quote"
+                        onClick={this.handleClick}
+                        style={{
+                            backgroundColor: this.state.color,
+                            border: 'solid 1px ' + this.state.color,
+                        }}
+                    >
                         New Quote
                     </button>
                     <a id="tweet-quote" href="https://twitter.com/intent/tweet">
-                        Tweet Quote
+                        <i
+                            className="fa-brands fa-twitter-square fa-2xl"
+                            style={{
+                                color: this.state.color
+                            }}
+                        ></i>
                     </a>
                 </div>
             </div>
