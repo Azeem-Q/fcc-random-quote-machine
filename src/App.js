@@ -87,8 +87,18 @@ class App extends React.Component {
                 }}
             >
                 <div id="quote-box">
-                    <p id="text">{this.state.quote}</p>
-                    <p id="author">{this.state.author}</p>
+
+                    <p id="text"> <i className="fa-solid fa-quote-left"></i> {this.state.quote} <i className="fa-solid fa-quote-right"></i></p>
+                    <p id="author"><i>{this.state.author}</i></p>
+                    <a
+                        id="tweet-quote"
+                        href="https://twitter.com/intent/tweet"
+                        style={{
+                            color: this.state.color,
+                        }}
+                    >
+                        <i className="fa-brands fa-twitter-square fa-2xl"></i>
+                    </a>
                     <button
                         id="new-quote"
                         onClick={this.handleClick}
@@ -99,14 +109,6 @@ class App extends React.Component {
                     >
                         New Quote
                     </button>
-                    <a id="tweet-quote" href="https://twitter.com/intent/tweet">
-                        <i
-                            className="fa-brands fa-twitter-square fa-2xl"
-                            style={{
-                                color: this.state.color
-                            }}
-                        ></i>
-                    </a>
                 </div>
             </div>
         );
