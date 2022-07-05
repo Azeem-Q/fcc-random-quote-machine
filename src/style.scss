@@ -6,19 +6,24 @@
     height: 100%;
 }
 #new-quote {
-    display: block;
-    position: relative;
-    margin-left: auto;
+    float: right;
     font-weight: bold;
     color: white;
     border: none;
     border-radius: 4%;
     padding: 3px;
-    &:hover, &:focus {
-        transform: scale(1.05);
+    &:hover,
+    &:focus {
+        opacity: 0.9;
     }
 }
 
+#tweet-quote {
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
 
 #quote-box {
     background-color: white;
@@ -28,4 +33,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
+}
+
+#btns {
+    display: block;
+}
+
+#text {
+    font-size: larger;
 }
