@@ -84,6 +84,7 @@ class App extends React.Component {
                 id="bg"
                 style={{
                     backgroundColor: this.state.color,
+                    transition: 'background-color 1000ms ease-in'
                 }}
             >
                 <div id="quote-box">
@@ -102,6 +103,7 @@ class App extends React.Component {
                             href="https://twitter.com/intent/tweet"
                             style={{
                                 color: this.state.color,
+                                transition: 'color 1000ms ease-in'
                             }}
                         >
                             <i className="fa-brands fa-twitter-square fa-2xl"></i>
@@ -111,7 +113,7 @@ class App extends React.Component {
                             onClick={this.handleClick}
                             style={{
                                 backgroundColor: this.state.color,
-                                border: 'solid 1px ' + this.state.color,
+                                transition: 'background-color 1000ms ease-in'
                             }}
                         >
                             New Quote
