@@ -84,26 +84,40 @@ class App extends React.Component {
                 id="bg"
                 style={{
                     backgroundColor: this.state.color,
-                    transition: 'background-color 1000ms ease-in'
+                    transition: 'background-color 1000ms ease-in',
                 }}
             >
                 <div id="quote-box">
-                    <p id="text">
+                    <p
+                        id="text"
+                        style={{
+                            color: this.state.color,
+                            transition: 'color 1000ms ease-in',
+                        }}
+                    >
                         {' '}
                         <i className="fa-solid fa-quote-left"></i>{' '}
                         {this.state.quote}{' '}
                         <i className="fa-solid fa-quote-right"></i>
                     </p>
-                    <p id="author">
+                    <p
+                        id="author"
+                        style={{
+                            color: this.state.color,
+                            transition: 'color 1000ms ease-in',
+                        }}
+                    >
                         <i>{this.state.author}</i>
                     </p>
                     <div id="btns">
                         <a
                             id="tweet-quote"
+                            target={'_blank'}
+                            rel={'noreferrer'}
                             href="https://twitter.com/intent/tweet"
                             style={{
                                 color: this.state.color,
-                                transition: 'color 1000ms ease-in'
+                                transition: 'color 1000ms ease-in',
                             }}
                         >
                             <i className="fa-brands fa-twitter-square fa-2xl"></i>
@@ -113,7 +127,7 @@ class App extends React.Component {
                             onClick={this.handleClick}
                             style={{
                                 backgroundColor: this.state.color,
-                                transition: 'background-color 1000ms ease-in'
+                                transition: 'background-color 1000ms ease-in',
                             }}
                         >
                             New Quote
