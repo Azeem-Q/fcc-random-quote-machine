@@ -41,6 +41,18 @@
 }
 
 #text {
-    font-size: larger;
+    font-size: xx-large;
 }
 
+#author {
+    font-size: large;
+}
+
+@media screen and (max-width: 640px) {
+    #text {
+        font-size: larger;
+    }
+    #author {
+        font-size: medium;
+    }
+}
