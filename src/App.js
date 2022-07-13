@@ -114,12 +114,15 @@ class App extends React.Component {
                             target={'_blank'}
                             rel={'noreferrer'}
                             href="https://twitter.com/intent/tweet"
-                            
                         >
-                            <FontAwesomeIcon icon={faTwitterSquare} size='xl' style={{
-                                color: this.state.color,
-                                transition: 'color 1000ms ease-in',
-                            }} />
+                            <FontAwesomeIcon
+                                icon={faTwitterSquare}
+                                size="xl"
+                                style={{
+                                    color: this.state.color,
+                                    transition: 'color 1000ms ease-in',
+                                }}
+                            />
                         </a>
                         <button
                             id="new-quote"
