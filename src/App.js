@@ -1,9 +1,8 @@
 import React from 'react';
 import './style.scss';
 import randomColor from 'randomcolor';
-import '@fortawesome/fontawesome-free/css/all.css';
-import '@fortawesome/fontawesome-free/js/all.js';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 const quotes = [
     'I do not fear computers. I fear lack of them.',
     'A computer once beat me at chess, but it was no match for me at kick boxing.',
@@ -115,12 +114,12 @@ class App extends React.Component {
                             target={'_blank'}
                             rel={'noreferrer'}
                             href="https://twitter.com/intent/tweet"
-                            style={{
+                            
+                        >
+                            <FontAwesomeIcon icon={faTwitterSquare} size='xl' style={{
                                 color: this.state.color,
                                 transition: 'color 1000ms ease-in',
-                            }}
-                        >
-                            <i className="fa-brands fa-twitter-square fa-2xl"></i>
+                            }} />
                         </a>
                         <button
                             id="new-quote"
