@@ -3,6 +3,8 @@ import './style.scss';
 import randomColor from 'randomcolor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+
 const quotes = [
     'I do not fear computers. I fear lack of them.',
     'A computer once beat me at chess, but it was no match for me at kick boxing.',
@@ -95,9 +97,9 @@ class App extends React.Component {
                         }}
                     >
                         {' '}
-                        <i className="fa-solid fa-quote-left"></i>{' '}
+                        <FontAwesomeIcon icon={faQuoteLeft} />{' '}
                         {this.state.quote}{' '}
-                        <i className="fa-solid fa-quote-right"></i>
+                        <FontAwesomeIcon icon={faQuoteRight} />
                     </p>
                     <p
                         id="author"
